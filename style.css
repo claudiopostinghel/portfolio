@@ -1,0 +1,271 @@
+h1,
+h2,
+p,
+span,
+a {
+    max-width: 50ch;
+    /* border: 1px dotted red !important; */
+}
+
+html {
+    background-color: #1d1a1a;
+    color: #fff;
+    font-family: 'Foundation Sans', sans-serif;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+html::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    object-fit: cover;
+    z-index: -10;
+    height: 100dvh;
+    width: 100vw;
+    object-position: right;
+}
+
+.hero-gradient {
+    position: absolute;
+    top: 0;
+    right: 0;
+    object-fit: cover;
+    z-index: -8;
+    height: 100dvh;
+    width: 100vw;
+    object-position: right;
+    background: linear-gradient(to top, #1d1a1a, transparent 2vw);
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    min-height: 90dvh;
+    position: relative;
+    padding: 5vw;
+    padding-bottom: 3vw;
+}
+
+.halant {
+    font-weight: 300;
+}
+
+.grammarly-desktop-integration {
+    display: none !important;
+}
+
+.BPer {
+    background: #297D84;
+}
+
+.Veycore {
+    background: #005E27;
+}
+
+.IOJ {
+    background: #FFFFFF;
+}
+
+.bper-illustration,
+.veycore-illustration,
+.ioj-illustration {
+    width: 58.333333%;
+    padding: 6rem 1rem 6rem 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    display: none;
+}
+
+@media (max-width: 1024px) {
+
+    .bper-illustration,
+    .veycore-illustration,
+    .ioj-illustration {
+        width: 100%;
+        padding: 3rem 2rem;
+    }
+}
+
+#projects {
+    margin-top: 0;
+    gap: 2vw;
+}
+
+.project-description,
+.testimonial-container {
+    padding: 4vw;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 96vh;
+    position: relative;
+}
+
+@media (max-width: 1024px) {
+    .project-container {
+        flex-direction: column;
+    }
+}
+
+.project-section {
+    min-height: 96vh;
+    width: 96vw;
+    display: flex;
+    flex-direction: row;
+
+    margin: 2vw;
+    border-radius: 2vw;
+
+    overflow: hidden;
+}
+
+.project-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    flex-grow: 0;
+}
+
+.client-logo {
+    height: 2rem;
+    width: auto;
+    margin-bottom: 1rem;
+    object-position: left;
+    object-fit: contain;
+}
+
+@media (max-width: 1024px) {
+
+}
+
+.testimonial-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: rgb(255 255 255 / 0.7);
+    line-height: 1.25;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.testimonial-container.dark {
+    background: rgba(0, 0, 0, 0.05);
+    flex-grow: 0;
+}
+
+@media (max-width: 1024px) {
+    .illustration-container {
+        background: rgba(255, 255, 255, 0.05);
+    }
+    .illustration-container.dark {
+        background: rgba(0, 0, 0, 0.05);
+    }
+}
+
+.testimonial {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.project-title {
+    line-height: 1;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.hero-title {
+    font-size: 6vw;
+    line-height: 1;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.illustration-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    /* border: 1px dotted red; */
+    width: 50%;
+}
+
+.illustration-container.center {
+    align-items: center;
+}
+
+.illustration-container img {
+    max-height: 90vh;
+    width: auto;
+}
+
+.veycore-override-img img {
+    max-height: 83vh;
+}
+
+.testimonial-quote {
+    margin-bottom: 16px;
+}
+
+.testimonial-quote.dark {
+    color: rgba(0,0,0,0.7);
+}
+
+@media (max-width: 1024px) {
+    .hero-image {
+        object-position: 75%;
+    }
+    .illustration-container {
+        position: relative;
+        width: 100%;
+    }
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-end;
+    position: relative;
+    padding: 5vw;
+    padding-bottom: 0;
+}
+
+.contact-title {
+    font-weight: 400;
+    font-size: 2.5rem;
+    line-height: 1;
+    text-align: center;
+    margin: 0 auto 2vw;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 2vw;
+    background: rgba(255, 255, 255, 0.05);
+    color: rgb(255 255 255 / 0.5);
+}

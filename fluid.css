@@ -1,0 +1,72 @@
+h1,
+h2 {
+    font-size: min(4.5vw, 4.5rem) !important;
+    line-height: 1;
+}
+
+h3 {
+    font-size: min(3vw, 3rem) !important;
+}
+
+p,
+span,
+a,
+button {
+    font-size: max(1vw, 1rem) !important;
+}
+
+
+@media screen and (max-width: 1024) {
+    h1,
+    h2 {
+        font-size: min(10vw, 3rem) !important;
+    }
+
+    h3 {
+        font-size: min(7vw, 2.5rem) !important;
+    }
+
+    p,
+    span,
+    a,
+    button {
+        font-size: 5vw !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h1,
+    h2 {
+        font-size: min(6vw, 3rem) !important;
+        margin-bottom: 0;
+    }
+
+    h3 {
+        font-size: min(5vw, 2.5rem) !important;
+    }
+
+    p,
+    span,
+    a,
+    button {
+        font-size: 2.6vw !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1,
+    h2 {
+        font-size: min(10vw, 2.5rem) !important;
+    }
+
+    h3 {
+        font-size: min(7vw, 2rem) !important;
+    }
+
+    p,
+    span,
+    a,
+    button {
+        font-size: 4vw !important;
+    }
+}

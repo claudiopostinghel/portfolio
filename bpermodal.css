@@ -1,0 +1,19 @@
+#imageModal {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+#imageModal.flex {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#imageModal img {
+    transform: translateY(100%) rotate(-5deg);
+    transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#imageModal.flex img {
+    transform: translateY(0) rotate(2deg);
+} 
