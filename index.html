@@ -16,37 +16,16 @@
 <body class="overflow-x-hidden">
 
     <div id="imageModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90">
-        <img src="six-meters.jpg" class="max-h-[90vh] w-auto rotate-0 transition-transform duration-700 p-12 bg-white" />
-        <button onclick="closeModal()" class="fixed bottom-8 left-1/2 -translate-x-1/2 px-4 py-2 bg-white/10 rounded-full uppercase hover:bg-white/20">Close</button>
+        <img src="six-meters.jpg"
+            class="max-h-[90vh] w-auto rotate-0 transition-transform duration-700 p-12 bg-white" />
+        <button onclick="closeModal()"
+            class="fixed bottom-8 left-1/2 -translate-x-1/2 px-4 py-2 bg-white/10 rounded-full uppercase hover:bg-white/20">Close</button>
     </div>
 
-    
-    <div id="container" class="">
-        <header class="flex flex-row items-center justify-center halant text-2xl uppercase top-0 bg-black/10">
-            <div class="max-w-screen-xl w-full flex flex-row items-center justify-between p-4 py-4">
-                <div>
-                    <span>Claudio Postinghel • Freelance Product Designer</span>
-                </div>
-                <div class="flex flex-row items-center">
-                    <a href="https://www.linkedin.com/in/claudiopostinghel/" target="_blank">LinkedIn</a>
-                    <div class="dropdown relative ml-4">
-                        <button class="dropbtn uppercase">Email</button>
-                        <div class="dropdown-content hidden absolute right-0 mt-2 w-48 bg-black rounded-lg">
-                            <a href="mailto:hi@claudiopostinghel.com"
-                                class="block px-4 py-2 hover:bg-white hover:text-black">Open email client</a>
-                            <a href="#" onclick="navigator.clipboard.writeText('hi@claudiopostinghel.com')"
-                                class="block px-4 py-2 hover:bg-white hover:text-black">Copy</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <img src="hero image.png" class="hero-image" />
-        <!-- <video src="hero-video.mp4" class="hero-video " loop autoplay muted playsinline></video> -->
-        <div class="hero-gradient" class="hero-gradient"></div>
+    <div id="hero-fixed" class="fixed top-0 w-full z-[-1]">
 
 
-        <div id="hero" class="hero-container">
+        <div class="hero-container">
 
             <h1 class="hero-title">
                 I design strategies and<br>
@@ -57,216 +36,306 @@
             </h1>
 
             <span class="leading-tight font-light text-white/70" style="max-width: none;">
-                A generalist designer who speaks the languages of design, development,<span class="hidden md:inline"><br></span> and business, ensuring
+                A generalist designer who speaks the languages of design, development,<span
+                    class="hidden md:inline"><br></span> and business, ensuring
                 harmony, clarity, and a whole-picture perspective.
             </span>
 
         </div>
     </div>
 
-    <div id="projects" class="rounded-3xl overflow-hidden">
+    <header class="header-container">
+        <div>
+            <span>Claudio Postinghel • Freelance Product Designer</span>
+        </div>
+        <div class="flex flex-row items-center">
+            <a href="https://www.linkedin.com/in/claudiopostinghel/" target="_blank"
+                class="flex items-center">LinkedIn</a>
+            <div class="dropdown relative ml-4">
+                <button class="dropbtn flex items-center w-full py-2">hi@claudiopostinghel.com</button>
+                <div
+                    class="dropdown-content hidden absolute right-0 mt-2 w-48 bg-black/70 backdrop-blur-sm rounded-lg z-10 overflow-hidden">
+                    <a href="mailto:hi@claudiopostinghel.com"
+                        class="block w-full px-4 py-3 hover:bg-white/10 transition-colors">Open email client</a>
+                    <a href="#" onclick="copyEmail(this); return false;"
+                        class="block w-full px-4 py-3 hover:bg-white/10 transition-colors">Copy</a>
+                </div>
+            </div>
+        </div>
+    </header>
 
-        <div class="BPer project-section">
-            <div class="project-container">
-                        <div class="project-description">
-                            <img src="BPER Logo.svg" class="client-logo" />
-                            <h2 class="project-title">
-                                Six meters of<br>
-                                Design System
-                            </h2>
+    <div class="snap-container">
+        <img src="hero image.png" class="hero-image" />
+        <!-- <video src="hero-video.mp4" class="hero-video " loop autoplay muted playsinline></video> -->
+        <div class="hero-gradient" class="hero-gradient"></div>
+        <div id="hero" class="snap-child" style="color: transparent !important;">
 
-                            <p class="text-xl font-light text-white/70 leading-tight mb-4">
-                                I led the creation of BPER Banca's Design System on Figma, improving consistency and
-                                collaboration, and trained the Design Team to ensure seamless adoption of Figma.
-                            </p>
+            <div id="hero" class="hero-container">
 
-                            <p class="text-xl font-light text-white/70 leading-tight mb-4">
-                                Why six meters?
-                                <a href="#" onclick="event.preventDefault(); openModal()" class="underline">Check it out</a>
-                            </p>
+                <h1 class="hero-title">
+                    I design strategies and<br>
+                    interfaces that users love<br>
+                    and deliver results.
+                    <!-- I collaborate with teams to craft effective strategies
+                        and solve the right problems, delivering seamless, intuitive experiences that users love. -->
+                </h1>
 
-                            <!-- <div class="flex flex-row gap-4 mt-4">
-                                <div class="px-4 py-2 bg-white/10 rounded-full uppercase">Design System</div>
-                                <div class="px-4 py-2 bg-white/10 rounded-full uppercase">Team training</div>
-                            </div> -->
+                <span class="leading-tight font-light" style="max-width: none;">
+                    A generalist designer who speaks the languages of design, development,<span
+                        class="hidden md:inline"><br></span> and business, ensuring
+                    harmony, clarity, and a whole-picture perspective.
+                </span>
 
-                        </div>
-                        <div class="testimonial-container">
-                            <p class="testimonial-quote">
-                                Claudio helped us with his technical expertise and tenacity to create the first version of
-                                the
-                                System design. Printing 6m of System design!
-                                He trained us on the Figma tool with professionalism and precision.
-                            </p>
-                            <div class="testimonial">
-                                <img src="Salvatore Rato.png" class="w-12 h-12 rounded-full" />
-                                <div class="flex flex-col">
-                                    <span class="text-white/90 font-medium">Salvatore Rato</span>
-                                    <span class="text-white/70">UX Project Manager • BPER Banca</span>
-                                </div>
+            </div>
+        </div>
+
+        <div class="snap-project">
+            <div class="BPer project-section rounded-t-3xl">
+                <div class="project-container">
+                    <div class="project-description">
+                        <img src="BPER Logo.svg" class="client-logo" />
+                        <h2 class="project-title">
+                            Six meters of<br>
+                            Design System
+                        </h2>
+
+                        <p class="text-xl font-light text-white/70 leading-tight mb-4">
+                            I led the creation of BPER Banca's Design System on Figma, improving consistency and
+                            collaboration, and trained the Design Team to ensure seamless adoption of Figma.
+                        </p>
+
+                        <p class="text-xl font-light text-white/70 leading-tight mb-4">
+                            Why six meters?
+                            <a href="#" onclick="event.preventDefault(); openModal()" class="underline">Check it out</a>
+                        </p>
+
+                        <!-- <div class="flex flex-row gap-4 mt-4">
+                                    <div class="px-4 py-2 bg-white/10 rounded-full uppercase">Design System</div>
+                                    <div class="px-4 py-2 bg-white/10 rounded-full uppercase">Team training</div>
+                                </div> -->
+
+                    </div>
+                    <div class="testimonial-container">
+                        <p class="testimonial-quote">
+                            Claudio helped us with his technical expertise and tenacity to create the first version of
+                            the
+                            System design. Printing 6m of System design!
+                            He trained us on the Figma tool with professionalism and precision.
+                        </p>
+                        <div class="testimonial">
+                            <img src="Salvatore Rato.png" class="w-12 h-12 rounded-full" />
+                            <div class="flex flex-col">
+                                <span class="text-white/90 font-medium">Salvatore Rato</span>
+                                <span class="text-white/70">UX Project Manager • BPER Banca</span>
                             </div>
                         </div>
+                    </div>
                     <div class="illustration-container center">
                         <img src="BPer Illustration.png" class="" />
                     </div>
+                </div>
             </div>
         </div>
 
-        <div class="Veycore project-section">
-            <div class="project-container">
-                <div class="project-description">
+        <div class="snap-project">
+            <div class="Veycore project-section">
+                <div class="project-container">
+                    <div class="project-description">
 
-                    <img src="Veycore Logo.png" class="client-logo" />
-                    
-                    <h2 class="project-title">
-                        Finding auto<br>repair quotes,<br>made easy
-                    </h2>
+                        <img src="Veycore Logo.png" class="client-logo" />
 
-                    <p class="text-xl font-light text-white/70 leading-tight mb-4">
-                        Redesigned the core user journey and user interface, transforming the process of finding and
-                        comparing auto
-                        repair quotes into a seamless, intuitive experience that drives higher conversion rates and
-                        user satisfaction.
-                    </p>
+                        <h2 class="project-title">
+                            Finding auto<br>repair quotes,<br>made easy
+                        </h2>
 
-                </div>
-                <div class="testimonial-container">
-                    <p class="testimonial-quote">
-                        Redesigned the core user journey, transforming the process of finding and comparing auto
-                        repair quotes into a seamless, intuitive experience that drives higher conversion rates and
-                        user satisfaction.
-                    </p>
-                    <div class="testimonial">
-                        <img src="Luca Maccarini.jpeg" class="w-12 h-12 rounded-full" />
-                        <div class="flex flex-col">
-                            <span class="text-white/90 font-medium">Luca Maccarini</span>
-                            <span class="text-white/70">CTO & Co-Founder • Veycore</span>
+                        <p class="text-xl font-light text-white/70 leading-tight mb-4">
+                            Redesigned the core user journey and user interface, transforming the process of finding and
+                            comparing auto
+                            repair quotes into a seamless, intuitive experience that drives higher conversion rates and
+                            user satisfaction.
+                        </p>
+
+                    </div>
+                    <div class="testimonial-container">
+                        <p class="testimonial-quote">
+                            Redesigned the core user journey, transforming the process of finding and comparing auto
+                            repair quotes into a seamless, intuitive experience that drives higher conversion rates and
+                            user satisfaction.
+                        </p>
+                        <div class="testimonial">
+                            <img src="Luca Maccarini.jpeg" class="w-12 h-12 rounded-full" />
+                            <div class="flex flex-col">
+                                <span class="text-white/90 font-medium">Luca Maccarini</span>
+                                <span class="text-white/70">CTO & Co-Founder • Veycore</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="illustration-container veycore-override-img">
-                    <img src="Veycore Illustration.png" />
-                </div>
-            </div>
-        </div>
-
-        <div class="IOJ project-section text-black">
-            <div class="project-container">
-                <div class="project-description">
-                    <img src="IOJlogo.svg" class="client-logo" />
-                    <h2 class="project-title">
-                        Bringing tourists<br>to the heart<br>of Japan
-                    </h2>
-
-                    <p class="text-xl font-light text-black/70 leading-tight mb-4">
-                        Designed an end-to-end solution of a seamless tour booking experience in Japan.
-                        From an intuitive mobile and web app for tourists, to a back-office system empowering
-                        operatives to manage everything effortlessly.
-                    </p>
-                </div>
-                <div class="testimonial-container dark">
-                    <p class="testimonial-quote dark">
-                        Working with him felt seamless—he's a true problem solver who guided us through the process,
-                        bringing clarity and structure to the product design journey.
-                    </p>
-                    <div class="testimonial">
-                        <img src="Andrea DElia.jpeg" class="w-12 h-12 rounded-full" />
-                        <div class="flex flex-col">
-                            <span class="text-black/90 font-medium">Andrea D'Elia</span>
-                            <span class="text-black/70">CEO & Founder • SolverDigital</span>
-                        </div>
+                    <div class="illustration-container veycore-override-img">
+                        <img src="Veycore Illustration.png" />
                     </div>
                 </div>
-                <div class="illustration-container dark">
-                    <img src="IOJillustration.png" class="" />
+            </div>
+        </div>
+
+        <div class="snap-project">
+            <div class="IOJ project-section text-black">
+                <div class="project-container">
+                    <div class="project-description">
+                        <img src="IOJlogo.svg" class="client-logo" />
+                        <h2 class="project-title">
+                            Bringing tourists<br>to the heart<br>of Japan
+                        </h2>
+
+                        <p class="text-xl font-light text-black/70 leading-tight mb-4">
+                            Designed an end-to-end solution of a seamless tour booking experience in Japan.
+                            From an intuitive mobile and web app for tourists, to a back-office system empowering
+                            operatives to manage everything effortlessly.
+                        </p>
+                    </div>
+                    <div class="testimonial-container dark">
+                        <p class="testimonial-quote dark">
+                            Working with him felt seamless—he's a true problem solver who guided us through the process,
+                            bringing clarity and structure to the product design journey.
+                        </p>
+                        <div class="testimonial">
+                            <img src="Andrea DElia.jpeg" class="w-12 h-12 rounded-full" />
+                            <div class="flex flex-col">
+                                <span class="text-black/90 font-medium">Andrea D'Elia</span>
+                                <span class="text-black/70">CEO & Founder • SolverDigital</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="illustration-container dark">
+                        <img src="IOJillustration.png" class="" />
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div id="container" class="mx-auto">
+        <div id="contact" class="snap-child">
 
-        <div id="contact" class="contact-container">
+            <div class="contact-container">
 
-            <h3 class="contact-title">
-                Let’s team up to make<br>something awesome —<br>
-                book a meeting
-            </h1>
+                <h3 class="contact-title">
+                    Let’s team up to make<br>something awesome —<br>
+                    book a meeting
+                    </h1>
 
-            <div class="w-full flex items-start justify-center">
-                <div style="width:100%;height:70vh;overflow:scroll" id="my-cal-inline"></div>
-                <script type="text/javascript">
-                    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-                    Cal("init", "meet", { origin: "https://cal.com" });
+                    <div class="w-full flex items-start justify-center">
+                        <div style="width:100%;height:70vh;overflow:scroll" id="my-cal-inline"></div>
+                        <script type="text/javascript">
+                            (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+                            Cal("init", "meet", { origin: "https://cal.com" });
 
-                    Cal.ns.meet("inline", {
-                        elementOrSelector: "#my-cal-inline",
-                        config: { "layout": "month_view", "theme": "dark" },
-                        calLink: "claus/meet",
-                    });
+                            Cal.ns.meet("inline", {
+                                elementOrSelector: "#my-cal-inline",
+                                config: { "layout": "month_view", "theme": "dark" },
+                                calLink: "claus/meet",
+                            });
 
-                    Cal.ns.meet("ui", { "theme": "dark", "styles": { "branding": { "brandColor": "#222222" } }, "hideEventTypeDetails": false, "layout": "month_view" });
-                </script>
+                            Cal.ns.meet("ui", { "theme": "dark", "styles": { "branding": { "brandColor": "#222222" } }, "hideEventTypeDetails": false, "layout": "month_view" });
+                        </script>
+                    </div>
+
             </div>
-
+            <div id="footer" class="footer-container">
+                <span class="text-sm">© 2024 Claudio Postinghel. All rights reserved.</span>
+            </div>
         </div>
-    </div>
-    
-    <div id="footer" class="footer-container">
-            <div class="flex gap-4">
-                <a href="mailto:hi@claudiopostinghel.com" class="hover:underline">hi@claudiopostinghel.com</a>
-                <a href="https://www.linkedin.com/in/claudiopostinghel/" target="_blank" class="hover:underline">LinkedIn</a>
-            </div>
-            <span class="text-sm">© 2024 Claudio Postinghel. All rights reserved.</span>
-    </div>
 
 
-    <script>
-        // Modal dropdown for email
-        document.addEventListener('click', function (event) {
-            const dropdowns = document.getElementsByClassName("dropdown-content");
-            for (let dropdown of dropdowns) {
-                if (!dropdown.parentElement.contains(event.target)) {
-                    dropdown.classList.add('hidden');
+
+        <script>
+            // Modal dropdown for email
+            document.addEventListener('click', function (event) {
+                const dropdowns = document.getElementsByClassName("dropdown-content");
+                for (let dropdown of dropdowns) {
+                    if (!dropdown.parentElement.contains(event.target)) {
+                        dropdown.classList.add('hidden');
+                    }
                 }
-            }
-        });
-
-        const dropButtons = document.getElementsByClassName("dropbtn");
-        for (let button of dropButtons) {
-            button.addEventListener('click', function (event) {
-                const content = this.nextElementSibling;
-                content.classList.toggle('hidden');
-                event.stopPropagation();
             });
-        }
 
-        function openModal() {
-            const modal = document.getElementById('imageModal');
-            modal.classList.remove('hidden');
-            // Force reflow
-            modal.offsetHeight;
-            modal.classList.add('flex');
-        }
+            const dropButtons = document.getElementsByClassName("dropbtn");
+            for (let button of dropButtons) {
+                button.addEventListener('click', function (event) {
+                    const content = this.nextElementSibling;
+                    content.classList.toggle('hidden');
+                    event.stopPropagation();
+                });
+            }
 
-        function closeModal() {
-            const modal = document.getElementById('imageModal');
-            const img = modal.querySelector('img');
-            img.style.transform = 'translateY(-150%) rotate(-5deg)';
-            modal.style.opacity = '0';
-            setTimeout(() => {
-                modal.classList.remove('flex');
-                modal.classList.add('hidden');
-                img.style.transform = '';
-                modal.style.opacity = '';
-            }, 700);
-        }
+            function openModal() {
+                const modal = document.getElementById('imageModal');
+                modal.classList.remove('hidden');
+                // Force reflow
+                modal.offsetHeight;
+                modal.classList.add('flex');
+            }
 
-        // Close on background click
-        document.getElementById('imageModal').addEventListener('click', function(e) {
-            if (e.target === this) closeModal();
-        });
-    </script>
+            function closeModal() {
+                const modal = document.getElementById('imageModal');
+                const img = modal.querySelector('img');
+                img.style.transform = 'translateY(-150%) rotate(-5deg)';
+                modal.style.opacity = '0';
+                setTimeout(() => {
+                    modal.classList.remove('flex');
+                    modal.classList.add('hidden');
+                    img.style.transform = '';
+                    modal.style.opacity = '';
+                }, 700);
+            }
+
+            // Close on background click
+            document.getElementById('imageModal').addEventListener('click', function (e) {
+                if (e.target === this) closeModal();
+            });
+
+            function copyEmail(element) {
+                navigator.clipboard.writeText('hi@claudiopostinghel.com');
+                const originalText = element.textContent;
+                element.textContent = 'Copied!';
+                setTimeout(() => {
+                    element.textContent = originalText;
+                }, 5000);
+            }
+
+            let lastScrollTop = 0;
+
+            document.querySelector('.snap-container').addEventListener('scroll', (e) => {
+                const heroImage = document.querySelector('.hero-image');
+                const heroContainer = document.querySelector('.hero-container');
+                const scrollPosition = e.target.scrollTop;
+                const opacity = 1 - (scrollPosition / 500);
+                const blur = (scrollPosition / 500) * 20;
+                
+                heroImage.style.filter = `blur(${blur}px)`;
+                heroContainer.style.filter = `blur(${blur}px)`;
+
+                // Animazione progetti
+                const projects = document.querySelectorAll('.project-section');
+                projects.forEach((project, index) => {
+                    const rect = project.getBoundingClientRect();
+                    const viewportHeight = window.innerHeight;
+                    
+                    let relativePosition;
+                    if (rect.top < 0) {
+                        relativePosition = 1 + (rect.bottom / viewportHeight);
+                    } else {
+                        relativePosition = 1 - (rect.top / viewportHeight);
+                    }
+                    
+                    const scale = 0.9 + (Math.min(Math.max(relativePosition, 0), 1) * 0.1);
+                    
+                    project.style.transform = `scale(${scale})`;
+                    project.style.transition = 'transform 0.1s ease-out';
+                    project.style.zIndex = projects.length - index;
+                });
+
+                lastScrollTop = currentScrollTop;
+            });
+        </script>
+    </div>
 </body>
 
 </html>

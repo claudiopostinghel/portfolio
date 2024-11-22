@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snap Scroll Example</title>
+    <style>
+        .container {
+            scroll-snap-type: y mandatory;
+            height: 100vh;
+            overflow-y: scroll;
+        }
+
+        section {
+            scroll-snap-align: start;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+        }
+
+        .one { background: #f94144; }
+        .two { background: #90be6d; }
+        .three { background: #2d9cdb; }
+        .four { background: #f8961e; }
+    </style>
+</head>
+<body style="scroll-snap-type: y mandatory; height: 100vh; overflow-y: scroll;">
+    <section class="one">Section 1</section>
+    <section class="two">Section 2</section>
+    <section class="three">Section 3</section>
+    <section class="four">Section 4</section>
+</body>
+</html>
