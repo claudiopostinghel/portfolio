@@ -14,21 +14,85 @@ html {
 }
 
 .header-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    font-family: 'Halant', serif;
-    font-size: 2rem;
-    background: rgba(0, 0, 0, 0.1);
-    padding: 0.5vw 6vw;
-
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75vw 6vw;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(4px);
+    z-index: 50;
+}
 
-    z-index: 100;
+.header-container .designer-title {
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    .header-container .designer-title {
+        display: inline;
+    }
+}
+
+.header-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    padding: 0;
+    display: block;
+    visibility: hidden;
+    position: absolute;
+    right: 0;
+    width: 12rem;
+    background-color: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+    border-radius: 0.5rem;
+    z-index: 10;
+    overflow: hidden;
+    padding: 0.4vw;
+}
+
+.dropdown:hover .dropdown-content {
+    visibility: visible;
+}
+
+.dropbtn {
+    display: flex;
+    align-items: center;
+    min-height: 32px;
+    padding: min(0.4vw, 0.7rem) min(1.2vw, 1.6rem);
+    background: white;
+    color: black;
+    border-radius: 9999px;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.dropdown-content a {
+    padding: 0.75rem;
+    border-radius: 0;
+    display: block;
+    width: 100%;
+    transition-property: color, background-color, border-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    cur
+}
+
+.dropdown-content a:hover {
+    border-radius: 0.25vw;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .hero-fixed {
@@ -72,8 +136,9 @@ html {
     justify-content: flex-end;
     min-height: 90dvh;
     position: relative;
-    padding: 10vw;
+    padding: 6vw;
     padding-bottom: 3vw;
+    color: rgba(255, 255, 255, 0.70);
 }
 
 .halant {
@@ -215,6 +280,7 @@ html {
     line-height: 1;
     font-weight: 400;
     margin-bottom: 1rem;
+    color: #fff;
 }
 
 .illustration-container {
@@ -268,14 +334,15 @@ html {
 }
 
 .contact-container {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: start;
-    justify-content: flex-end;
-    position: relative;
-    padding: 5vw;
-    padding-top: 2vw;
+    justify-content: center;
+    padding: 4vw;
+    padding-top: 1vw;
     min-height: 100vh;
+    padding-bottom: 0;
 }
 
 .contact-title {
@@ -292,39 +359,14 @@ html {
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    padding: 2vw;
+    padding: 1vw;
     background: rgba(255, 255, 255, 0.05);
     color: rgb(255 255 255 / 0.5);
     position: absolute;
     bottom: 0;
+    left: 0;
+    right: 0;
     width: 100%;
-}
-
-.snap-container {
-    height: 100vh; overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE and Edge */
-}
-
-.snap-container::-webkit-scrollbar {
-    display: none; /* Chrome, Safari and Opera */
-}
-
-.snap-child, .snap-project {
-    scroll-snap-align: start;
-}
-
-.snap-project {
-    max-height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2vw;
-    padding-top: 6vw;
 }
 
 .hero-spacer {
@@ -341,8 +383,4 @@ html {
 #hero-fixed .header-container {
     pointer-events: auto;
     z-index: 100;
-}
-
-.snap-child {
-    height: 82vh;
 }

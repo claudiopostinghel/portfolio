@@ -1,0 +1,41 @@
+.snap-container {
+    height: 100vh; overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+.snap-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+}
+
+.snap-child, .snap-project {
+    scroll-snap-align: start;
+}
+
+@media (min-width: 768px) {
+
+    .snap-child, .snap-project {
+        scroll-snap-align: start;
+    }
+
+    .snap-project {
+        max-height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2vw;
+        padding-top: 6vw;
+    }
+
+    .snap-child {
+        height: 82vh;
+    }
+}
+
+.hover\:dropdown-content-visible:hover .dropdown-content {
+    display: block;
+}
