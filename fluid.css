@@ -16,21 +16,21 @@ button {
 }
 
 
-@media screen and (max-width: 1024) {
+@media screen and (max-width: 1024px) {
     h1,
     h2 {
         font-size: min(10vw, 3rem) !important;
     }
 
     h3 {
-        font-size: min(7vw, 2.5rem) !important;
+        font-size: min(7vw, 5rem) !important;
     }
 
     p,
     span,
     a,
     button {
-        font-size: 5vw !important;
+        font-size: 2vw !important;
     }
 }
 
@@ -56,7 +56,7 @@ button {
 @media screen and (max-width: 480px) {
     h1,
     h2 {
-        font-size: min(10vw, 2.5rem) !important;
+        font-size: min(7vw, 2.5rem) !important;
     }
 
     h3 {
