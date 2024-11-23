@@ -433,9 +433,18 @@
 
                 // Animazione progetti
                 const projects = document.querySelectorAll('.project-section');
+                const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+                const doNotAnimate = window.innerWidth < 768 || isSafari;
+                
                 projects.forEach((project, index) => {
                     // Skip animation for first project
                     if (index === 0) {
+                        project.style.transform = 'scale(1)';
+                        project.style.zIndex = projects.length - index;
+                        return;
+                    }
+
+                    if (doNotAnimate) {
                         project.style.transform = 'scale(1)';
                         project.style.zIndex = projects.length - index;
                         return;

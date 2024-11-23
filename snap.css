@@ -59,6 +59,14 @@
 }
 
 @media (max-width: 480px) {
+    .snap-container {
+        scroll-snap-type: none;
+    }
+
+    .snap-child, .snap-project {
+        scroll-snap-align: none;
+    }
+
     .snap-child, .snap-project {
         scroll-snap-align: start;
     }

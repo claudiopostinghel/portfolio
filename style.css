@@ -11,6 +11,7 @@ html {
     background-color: #1d1a1a;
     color: #fff;
     font-family: 'Foundation Sans', sans-serif;
+    animation: fadeInBg 4s ease-out;
 }
 
 .header-container {
@@ -115,6 +116,7 @@ html {
     height: 100dvh;
     width: 100vw;
     object-position: right;
+    animation: fadeIn 4s ease-out;
 }
 
 .hero-gradient {
@@ -394,4 +396,20 @@ html {
 #hero-fixed .header-container {
     pointer-events: auto;
     z-index: 100;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInBg {
+    from { 
+        background-color: #000;
+        color: #000;
+    }
+    to { 
+        background-color: #1d1a1a;
+        color: #fff;
+    }
 }
