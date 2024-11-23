@@ -232,6 +232,7 @@ html {
 
 .illustration-container.center {
     align-items: center;
+    padding: 5vw;
 }
 
 .illustration-container img {
@@ -273,8 +274,8 @@ html {
     justify-content: flex-end;
     position: relative;
     padding: 5vw;
-    padding-bottom: 0;
-    height: 100vh;
+    padding-top: 2vw;
+    min-height: 100vh;
 }
 
 .contact-title {
