@@ -17,62 +17,13 @@
 
 <body class="overflow-x-hidden">
 
-    <div id="imageModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90">
-        <img src="six-meters.jpg"
-            class="max-h-[90vh] w-auto rotate-0 transition-transform duration-700 p-12 bg-white" />
-        <button onclick="closeModal()"
-            class="fixed bottom-8 left-1/2 -translate-x-1/2 px-4 py-2 bg-white/10 rounded-full uppercase hover:bg-white/20">Close</button>
-    </div>
+    <div id="hero" class="snap-child">
+        <img src="hero image.jpeg" class="hero-image" />
+        <div class="hero-gradient" class="hero-gradient"></div>
+        <div id="hero-transparent" style="color: transparent !important;">
+            <div class="hero-container project-description flex flex-row items-end" style="justify-content: space-between !important;">
 
-    <!-- <div id="hero-fixed" class="fixed top-0 w-full z-[-1] border border-red-500">
-
-
-        <div class="hero-container">
-
-            <h1 class="hero-title">
-                I design strategies and<br>
-                interfaces that users love<br>
-                and deliver results.
-            </h1>
-
-            <span class="leading-tight font-light text-white/70" style="max-width: none;">
-                I'm a generalist designer who speaks the languages of design, development,<span
-                    class="hidden md:inline"><br></span> and business, ensuring
-                harmony, clarity, and a whole-picture perspective.
-            </span>
-
-        </div>
-    </div> -->
-
-    <header class="header-container">
-        <div class="flex gap-1">
-            <a href="#hero" onclick="scrollToSection('hero')" class="px-4 py-2 rounded-full hover:bg-white/10">Claudio
-                Postinghel</a>
-            <a href="#product-design" onclick="scrollToSection('product-design')"
-                class="px-4 py-2 rounded-full hover:bg-white/10">Product Design</a>
-            <a href="#design-system" onclick="scrollToSection('design-system')"
-                class="px-4 py-2 rounded-full hover:bg-white/10">Design System</a>
-        </div>
-        <div class="header-actions">
-            <div class="dropdown">
-                <button class="dropbtn">
-                    <span class="contact-btn">Contact</span>
-                </button>
-                <div class="dropdown-content">
-                    <a href="#contact" onclick="scrollToContact(event)">Book a meeting</a>
-                    <a href="#" onclick="copyEmail(this); return false;">Copy email</a>
-                    <a href="https://www.linkedin.com/in/claudiopostinghel/" target="_blank">LinkedIn</a>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <div class="snap-container">
-        <div id="hero" class="snap-child">
-            <img src="hero image.jpeg" class="hero-image" />
-            <div class="hero-gradient" class="hero-gradient"></div>
-            <div id="hero-transparent" style="color: transparent !important;">
-                <div class="hero-container project-description">
+                <div class="flex flex-col gap-2">
                     <h1 class="hero-title">
                         I design strategies and<br>
                         interfaces that users love<br>
@@ -85,413 +36,43 @@
                         harmony, clarity, and a whole-picture perspective.
                     </span>
                 </div>
-            </div>
-        </div>
 
-        <div id="product-design" class="snap-project">
-            <div class="project-section rounded-t-3xl" style="background: transparent;">
-                <div class="project-container">
-                    <div class="project-description">
-                        <div>
-                            <h2 class="project-title">
-                                Product Design<br>
-                                working closely with<br>
-                                business and teams
-                            </h2>
 
-                            <p class="text-xl font-light text-white/70 leading-tight mb-4"
-                                style="max-width: 58ch !important;">
-                                Product Design goes beyond UX/UI — it's about a practical, big-picture approach to
-                                creating digital experiences that meet user needs and drive business success.
-                            </p>
-
-                            <p class="text-xl font-light text-white/70 leading-tight mb-4"
-                                style="max-width: 58ch !important;">
-                                It's about a holistic approach, connecting strategy, design, and functionality to create
-                                solutions that work, through seamless collaboration where we tackle challenges together
-                                and enjoy the journey.
-                            </p>
-                            </p>
-                            <p class="text-xl font-light text-white/70 leading-tight mb-4"
-                                style="max-width: 58ch !important;">
-                                It's about deliver impactful solutions through a seamless and efficient process.
-                            </p>
-
-                            <div class="flex flex-wrap gap-8 my-8">
-                                <div class="h-12 w-32 bg-white opacity-50 rounded-xl"></div>
-                                <div class="h-12 w-32 bg-white opacity-50 rounded-xl"></div>
-                                <div class="h-12 w-32 bg-white opacity-50 rounded-xl"></div>
-                            </div>
-
-                        </div>
-
-                        <h4 class="text-xl font-light text-white/70 leading-tight">
-                            Here's my favorite:
-                        </h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="snap-project">
-            <div class="Veycore project-section">
-                <div class="project-container">
-                    <div class="project-description">
-
-                        <img src="Veycore Logo.png" class="client-logo" />
-
-                        <h2 class="project-title">
-                            Finding auto<br>repair quotes,<br>made easy
-                        </h2>
-
-                        <p class="text-xl font-light text-white/70 leading-tight mb-4">
-                            I redesigned the core user journey and user interface, transforming the process of finding
-                            and
-                            comparing auto
-                            repair quotes into a seamless, intuitive experience that drives higher conversion rates and
-                            user satisfaction.
-                        </p>
-
-                    </div>
-                    <div class="testimonial-container">
-                        <p class="testimonial-quote">
-                            Lorem ipsum varius diam at est euismod ultricies.
-                            Aenean in sem ullamcorper dignissim justo a pellentesque nibh.
-                            Integer ex lorem tempus at ex eget mattis condimentum mauris.
-                        </p>
-                        <div class="testimonial">
-                            <img src="Luca Maccarini.jpeg" class="w-12 h-12 rounded-full" />
-                            <div class="flex flex-col">
-                                <span class="text-white/90 font-medium">Luca Maccarini</span>
-                                <span class="text-white/70">CTO & Co-Founder • Veycore</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="illustration-container veycore-override-img">
-                        <img src="Veycore Illustration.png" />
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="snap-project">
-            <div class="IOJ project-section text-black">
-                <div class="project-container">
-                    <div class="project-description">
-                        <img src="IOJlogo.svg" class="client-logo" />
-                        <h2 class="project-title">
-                            Bringing tourists<br>to the heart<br>of Japan
-                        </h2>
-
-                        <p class="text-xl font-light text-black/70 leading-tight mb-4">
-                            Designed an end-to-end solution of a seamless tour booking experience in Japan.
-                            From an intuitive mobile and web app for tourists, to a back-office system empowering
-                            operatives to manage everything effortlessly.
-                        </p>
-                    </div>
-                    <div class="testimonial-container dark">
-                        <p class="testimonial-quote dark">
-                            Working with Claudio felt seamless. I needed an expert product designer who could solve
-                            complex problems and he exceeded my expectations bringing in all his expertise and
-                            frameworks that significantly improved our project’s clarity, thus development efficiency.
-                            The result was an outstanding product design that made me, my team and my customer extremely
-                            happy.
-                        </p>
-                        <div class="testimonial">
-                            <img src="Andrea DElia.jpeg" class="w-12 h-12 rounded-full" />
-                            <div class="flex flex-col">
-                                <span class="text-black/90 font-medium">Andrea D'Elia</span>
-                                <span class="text-black/70">CEO & Founder • SolverDigital</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="illustration-container dark">
-                        <img src="IOJillustration.png" class="" />
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="snap-project">
-            <div class="project-section" style="background: #027EB8;">
-                <div class="project-container">
-                    <div class="project-description">
-                        <img src="Spedire Logo.svg" class="client-logo" />
-                        <h2 class="project-title">
-                            Ship Anywhere<br>
-                            Across the Globe
-                        </h2>
-
-                        <p class="text-xl font-light text-white/70 leading-tight mb-4">
-                            Lorem ipsum varius diam at est euismod ultricies.
-                            Aenean in sem ullamcorper dignissim justo a pellentesque nibh.
-                            Integer ex lorem tempus at ex eget mattis condimentum mauris.
-                        </p>
-                    </div>
-                    <div class="testimonial-container">
-                        <p class="testimonial-quote">
-                            Lorem ipsum varius diam at est euismod ultricies.
-                            Aenean in sem ullamcorper dignissim justo a pellentesque nibh.
-                            Integer ex lorem tempus at ex eget mattis condimentum mauris.
-                        </p>
-                        <div class="testimonial">
-                            <img src="Luca Lorenzini.jpeg" class="w-12 h-12 rounded-full" />
-                            <div class="flex flex-col">
-                                <span class="text-white/90 font-medium">Luca Lorenzini</span>
-                                <span class="text-white/70">CEO & Founder • Spedire</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="illustration-container spedire-override-img">
-                        <img src="Spedire Illustration.png" class="" />
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="design-system" class="snap-project">
-            <div class="project-section rounded-t-3xl" style="background: transparent;">
-                <div class="project-container">
-                    <div class="project-description">
-                        <h2 class="project-title">
-                            Design Systems<br>
-                            that scale teams<br>
-                            and operations
-                        </h2>
-
-                        <p class="text-xl font-light text-white/70 leading-tight mb-4">
-                            Design Systems are frameworks that scale design across teams and products, ensuring
-                            consistency, efficiency, and quality.
-                        </p>
-
-                        <p class="text-xl font-light text-white/70 leading-tight mb-4">
-
-                            They streamline workflows, align design and development, and accelerate delivery while
-                            maintaining a cohesive user experience.
-                        </p>
-
-                        <p class="text-xl font-light text-white/70 leading-tight mb-4">
-                            Both agency and freelance roles, I've worked with many of the biggest names in tech.
-                        </p>
-
-                        <div class="flex flex-wrap gap-2 my-8">
-                            <div class="h-12 w-32 bg-white opacity-50 rounded-xl"></div>
-                            <div class="h-12 w-32 bg-white opacity-50 rounded-xl"></div>
-                            <div class="h-12 w-32 bg-white opacity-50 rounded-xl"></div>
-                        </div>
-
-                        <h4 class="text-xl font-light text-white/70 leading-tight">
-                            Here's my favorite:
-                        </h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="snap-project">
-            <div class="BPer project-section rounded-t-3xl">
-                <div class="project-container">
-                    <div class="project-description">
-                        <img src="BPER Logo.svg" class="client-logo" />
-                        <h2 class="project-title">
-                            Six meters of<br>
-                            Design System
-                        </h2>
-
-                        <p class="text-xl font-light text-white/70 leading-tight mb-4">
-                            I led the creation of BPER Banca's Design System on Figma, improving consistency and
-                            collaboration, and trained the Design Team to ensure seamless adoption of Figma.
-                        </p>
-
-                        <p class="text-xl font-light text-white/70 leading-tight mb-4">
-                            Why six meters?
-                            <a href="#" onclick="event.preventDefault(); openModal()" class="underline">Check it out</a>
-                        </p>
-
-                        <!-- <div class="flex flex-row gap-4 mt-4">
-                                    <div class="px-4 py-2 bg-white/10 rounded-full uppercase">Design System</div>
-                                    <div class="px-4 py-2 bg-white/10 rounded-full uppercase">Team training</div>
-                                </div> -->
-
-                    </div>
-                    <div class="testimonial-container">
-                        <p class="testimonial-quote">
-                            Claudio helped us with his technical expertise and tenacity to create the first version of
-                            the
-                            System design. Printing 6m of System design!
-                            He trained us on the Figma tool with professionalism and precision.
-                        </p>
-                        <div class="testimonial">
-                            <img src="Salvatore Rato.png" class="w-12 h-12 rounded-full" />
-                            <div class="flex flex-col">
-                                <span class="text-white/90 font-medium">Salvatore Rato</span>
-                                <span class="text-white/70">UX Project Manager • BPER Banca</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="illustration-container center">
-                        <img src="BPer Illustration.png" class="" />
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="contact" class="snap-child">
-
-            <div class="contact-container">
-
-                <h3 class="contact-title">
-                    Make it happen together,<br>
-                    book a meeting
-                </h3>
-
-                <div class="w-full">
-                    <div style="width:100%;height:60vh;overflow:scroll" id="my-cal-inline"></div>
-                    <script type="text/javascript">
-                        (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-                        Cal("init", "meet", { origin: "https://cal.com" });
-
-                        Cal.ns.meet("inline", {
-                            elementOrSelector: "#my-cal-inline",
-                            config: { "layout": "month_view", "theme": "dark" },
-                            calLink: "claus/meet",
-                        });
-
-                        Cal.ns.meet("ui", { "theme": "dark", "styles": { "branding": { "brandColor": "#222222" } }, "hideEventTypeDetails": false, "layout": "month_view" });
-                    </script>
+                <div class="bg-white p-4 rounded-lg flex flex-col gap-3 items-center max-w-[320px] h-fit">
+                    <p class="text-gray-600">Enter password to preview</p>
+                    <input type="password" id="sitePassword" placeholder="Password"
+                        class="w-full px-3 py-2 rounded-md border border-gray-200 text-gray-900">
+                    <button onclick="checkPassword()"
+                        class="w-full px-3 py-2 bg-black rounded-md hover:bg-gray-800 text-white">Enter</button>
                 </div>
 
-                <div id="footer" class="footer-container">
-                    <span class="text-sm">© 2024 Claudio Postinghel. All rights reserved.</span>
-                </div>
             </div>
         </div>
-
-
-
-        <script>
-            // Modal dropdown for email
-            document.addEventListener('click', function (event) {
-                const dropdowns = document.getElementsByClassName("dropdown-content");
-                for (let dropdown of dropdowns) {
-                    if (!dropdown.parentElement.contains(event.target)) {
-                        dropdown.classList.add('hidden');
-                    }
-                }
-            });
-
-            const dropButtons = document.getElementsByClassName("dropbtn");
-            for (let button of dropButtons) {
-                button.addEventListener('click', function (event) {
-                    const content = this.nextElementSibling;
-                    content.classList.toggle('hidden');
-                    event.stopPropagation();
-                });
-            }
-
-            function openModal() {
-                const modal = document.getElementById('imageModal');
-                modal.classList.remove('hidden');
-                // Force reflow
-                modal.offsetHeight;
-                modal.classList.add('flex');
-            }
-
-            function closeModal() {
-                const modal = document.getElementById('imageModal');
-                const img = modal.querySelector('img');
-                img.style.transform = 'translateY(-150%) rotate(-5deg)';
-                modal.style.opacity = '0';
-                setTimeout(() => {
-                    modal.classList.remove('flex');
-                    modal.classList.add('hidden');
-                    img.style.transform = '';
-                    modal.style.opacity = '';
-                }, 700);
-            }
-
-            // Close on background click
-            document.getElementById('imageModal').addEventListener('click', function (e) {
-                if (e.target === this) closeModal();
-            });
-
-            function copyEmail(element) {
-                navigator.clipboard.writeText('hi@claudiopostinghel.com');
-                const originalText = element.textContent;
-                element.textContent = 'Copied!';
-                setTimeout(() => {
-                    element.textContent = originalText;
-                }, 5000);
-            }
-
-            let lastScrollTop = 0;
-
-            document.querySelector('.snap-container').addEventListener('scroll', (e) => {
-                const heroImage = document.querySelector('.hero-image');
-                const heroContainer = document.querySelector('.hero-container');
-                const heroText = document.querySelector('.hero-container h1, .hero-container span');
-                const scrollPosition = e.target.scrollTop;
-                const opacity = 1 - (scrollPosition / 500);
-                const blur = (scrollPosition / 500) * 30;
-
-                heroImage.style.filter = `blur(${blur}px)`;
-                heroContainer.style.filter = `blur(${blur}px)`;
-                heroText.style.opacity = opacity;
-
-                // Animazione progetti
-                const projects = document.querySelectorAll('.project-section');
-                const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-                const doNotAnimate = window.innerWidth < 768 || isSafari;
-
-                projects.forEach((project, index) => {
-                    // Skip animation for first project
-                    if (index === 0) {
-                        project.style.transform = 'scale(1)';
-                        project.style.zIndex = projects.length - index;
-                        return;
-                    }
-
-                    if (doNotAnimate) {
-                        project.style.transform = 'scale(1)';
-                        project.style.zIndex = projects.length - index;
-                        return;
-                    }
-
-                    const rect = project.getBoundingClientRect();
-                    const viewportHeight = window.innerHeight;
-
-                    let relativePosition;
-                    if (rect.top < 0) {
-                        relativePosition = 1 + (rect.bottom / viewportHeight);
-                    } else {
-                        relativePosition = 1 - (rect.top / viewportHeight);
-                    }
-
-                    const scale = 0.9 + (Math.min(Math.max(relativePosition, 0), 1) * 0.1);
-
-                    project.style.transform = `scale(${scale})`;
-                    project.style.transition = 'transform 0.1s ease-out';
-                    project.style.zIndex = projects.length - index;
-                });
-
-                lastScrollTop = scrollPosition;
-            });
-
-            function scrollToContact(e) {
-                e.preventDefault();
-                document.querySelector('#contact').scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-
-            function scrollToSection(id) {
-                event.preventDefault();
-                document.getElementById(id).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-        </script>
     </div>
+
+    <script>
+        function checkPassword() {
+            const password = document.getElementById('sitePassword').value;
+            const shifts = [3, -1, 2, -2, 1]; // Different shift values for each position
+            
+            const encoded = password
+                .split('')
+                .map((char, index) => {
+                    if (char.match(/[a-z]/i)) {
+                        const shift = shifts[index % shifts.length];
+                        const code = char.charCodeAt(0);
+                        const isUpperCase = code >= 65 && code <= 90;
+                        const base = isUpperCase ? 65 : 97;
+                        // Add 26 before modulo to handle negative shifts
+                        return String.fromCharCode((((code - base + shift + 26) % 26) + base));
+                    }
+                    return char;
+                })
+                .join('');
+            
+            window.location.href = `/${encoded}`;
+        }
+    </script>
 </body>
 
 </html>
