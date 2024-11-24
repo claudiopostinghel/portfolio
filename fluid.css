@@ -8,6 +8,10 @@ h3 {
     font-size: min(3vw, 3rem) !important;
 }
 
+h4 {
+    font-size: min(2vw, 2rem) !important;
+}
+
 p,
 span,
 a,
@@ -24,6 +28,10 @@ button {
 
     h3 {
         font-size: min(7vw, 5rem) !important;
+    }
+
+    h4 {
+        font-size: min(5vw, 2.5rem) !important;
     }
 
     p,
@@ -45,6 +53,10 @@ button {
         font-size: min(5vw, 2.5rem) !important;
     }
 
+    h4 {
+        font-size: min(4vw, 2rem) !important;
+    }
+
     p,
     span,
     a,
@@ -61,6 +73,10 @@ button {
 
     h3 {
         font-size: min(7vw, 2rem) !important;
+    }
+
+    h4 {
+        font-size: min(6vw, 1.8rem) !important;
     }
 
     p,

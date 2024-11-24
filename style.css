@@ -25,7 +25,6 @@ html {
     align-items: center;
     padding: 1rem 6vw;
     background: rgba(0, 0, 0, 0.05);
-    backdrop-filter: blur(4px);
     z-index: 50;
 }
 
@@ -219,7 +218,6 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: left;
-    flex-grow: 0;
 }
 
 .client-logo {
@@ -373,7 +371,7 @@ html {
     justify-content: center;
     gap: 0.5rem;
     padding: 1vw;
-    background: rgba(255, 255, 255, 0.05);
+    /* background: rgba(255, 255, 255, 0.05); */
     color: rgb(255 255 255 / 0.5);
     position: absolute;
     bottom: 0;
@@ -412,4 +410,20 @@ html {
         background-color: #1d1a1a;
         color: #fff;
     }
+}
+
+.header-container nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.header-container nav a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.header-container nav a:hover,
+.header-container nav a.active {
+    color: rgba(255,255,255,1);
 }

@@ -45,7 +45,14 @@
     </div> -->
 
     <header class="header-container">
-        <span>Claudio Postinghel</span>
+        <div class="flex gap-1">
+            <a href="#hero" onclick="scrollToSection('hero')" class="px-4 py-2 rounded-full hover:bg-white/10">Claudio
+                Postinghel</a>
+            <a href="#product-design" onclick="scrollToSection('product-design')"
+                class="px-4 py-2 rounded-full hover:bg-white/10">Product Design</a>
+            <a href="#design-system" onclick="scrollToSection('design-system')"
+                class="px-4 py-2 rounded-full hover:bg-white/10">Design System</a>
+        </div>
         <div class="header-actions">
             <div class="dropdown">
                 <button class="dropbtn">
@@ -61,15 +68,15 @@
     </header>
 
     <div class="snap-container">
-        <div class="snap-child">
+        <div id="hero" class="snap-child">
             <img src="hero image.jpeg" class="hero-image" />
             <div class="hero-gradient" class="hero-gradient"></div>
-            <div id="hero" style="color: transparent !important;">
+            <div id="hero-transparent" style="color: transparent !important;">
                 <div class="hero-container project-description">
                     <h1 class="hero-title">
                         I design strategies and<br>
                         interfaces that users love<br>
-                        and deliver results.
+                        to deliver results
                     </h1>
 
                     <span class="leading-tight font-light" style="max-width: none;">
@@ -81,11 +88,10 @@
             </div>
         </div>
 
-        <div class="snap-project">
+        <div id="product-design" class="snap-project">
             <div class="project-section rounded-t-3xl" style="background: transparent;">
                 <div class="project-container">
-                    <div class="project-description"
-                        style="height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div class="project-description">
                         <div>
                             <h2 class="project-title">
                                 Product Design<br>
@@ -119,11 +125,9 @@
 
                         </div>
 
-                        <div>
-                            <p class="text-xl font-light text-white/70 leading-tight">
-                                Here's my favorite:
-                            </p>
-                        </div>
+                        <h4 class="text-xl font-light text-white/70 leading-tight">
+                            Here's my favorite:
+                        </h4>
                     </div>
                 </div>
             </div>
@@ -187,8 +191,11 @@
                     </div>
                     <div class="testimonial-container dark">
                         <p class="testimonial-quote dark">
-                            Working with him felt seamless—he's a true problem solver who guided us through the process,
-                            bringing clarity and structure to the product design journey.
+                            Working with Claudio felt seamless. I needed an expert product designer who could solve
+                            complex problems and he exceeded my expectations bringing in all his expertise and
+                            frameworks that significantly improved our project’s clarity, thus development efficiency.
+                            The result was an outstanding product design that made me, my team and my customer extremely
+                            happy.
                         </p>
                         <div class="testimonial">
                             <img src="Andrea DElia.jpeg" class="w-12 h-12 rounded-full" />
@@ -242,7 +249,7 @@
             </div>
         </div>
 
-        <div class="snap-project">
+        <div id="design-system" class="snap-project">
             <div class="project-section rounded-t-3xl" style="background: transparent;">
                 <div class="project-container">
                     <div class="project-description">
@@ -273,9 +280,9 @@
                             <div class="h-12 w-32 bg-white opacity-50 rounded-xl"></div>
                         </div>
 
-                        <p class="text-xl font-light text-white/70 leading-tight">
+                        <h4 class="text-xl font-light text-white/70 leading-tight">
                             Here's my favorite:
-                        </p>
+                        </h4>
                     </div>
                 </div>
             </div>
@@ -435,7 +442,7 @@
                 const projects = document.querySelectorAll('.project-section');
                 const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
                 const doNotAnimate = window.innerWidth < 768 || isSafari;
-                
+
                 projects.forEach((project, index) => {
                     // Skip animation for first project
                     if (index === 0) {
@@ -473,6 +480,13 @@
             function scrollToContact(e) {
                 e.preventDefault();
                 document.querySelector('#contact').scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+
+            function scrollToSection(id) {
+                event.preventDefault();
+                document.getElementById(id).scrollIntoView({
                     behavior: 'smooth'
                 });
             }
