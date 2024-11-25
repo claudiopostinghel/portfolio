@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claudio Postinghel • Freelance Product Designer</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="fluid.css">
+
+<style>
+    .loader {
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #3498db;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+
+
+
+<body class="overflow-x-hidden text-center">
+    <div class="flex flex-col items-center justify-center h-screen bg-black/20">
+        <img src="hero image.jpeg" class="hero-image" style="animation: none; filter: blur(20px);" />
+
+        <div class="bg-white p-4 rounded-lg flex flex-col gap-3 items-center max-w-[320px] h-fit">
+            <div class="loader"></div>
+            <p class="text-gray-600">Redirecting you to my calendar page...</p>
+        </div>
+
+        <div class="mt-4 flex flex-col items-center gap-2 opacity-0" style="animation: fadeIn 1s ease-in forwards 3s;">
+            <p class="text-white">Is your browser blocking the redirect?<br>Here's the link:
+                <a href="https://cal.com/claus/meeting?layout=week_view"
+                    class="px-1 py-1 rounded-md hover:bg-white/10 text-white text-center no-underline">cal.com/claus/meeting</a>
+            </p>
+
+        </div>
+
+    </div>
+    <script>
+          window.location.href = "https://cal.com/claus/meeting?layout=week_view";
+    </script>
+</body>
+
+</html>
