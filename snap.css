@@ -77,6 +77,12 @@
     .spedire-override-img img {
         object-position: center bottom;
     }
+
+
+    .veycore-override-img img {
+        max-height: 80vh;
+        max-width: 80vw;
+    }
 }
 
 @media (max-width: 768px) {
@@ -113,6 +119,5 @@
 
     .project-container {
         flex-direction: column;
-        padding-top: calc(10vw + 40px);
     }
 }
