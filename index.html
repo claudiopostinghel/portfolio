@@ -17,11 +17,31 @@
 
 <body class="overflow-x-hidden">
 
+    <header class="header-container">
+
+        <div class="flex gap-1">
+
+        </div>
+        <div class="header-actions">
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <span class="contact-btn">Contact</span>
+                </button>
+                <div class="dropdown-content">
+                    <a href="meeting.html">Book a meeting</a>
+                    <a href="#" onclick="copyEmail(this); return false;">Copy email</a>
+                    <a href="https://www.linkedin.com/in/claudiopostinghel/" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
     <div id="hero" class="snap-child">
         <img src="hero image.jpeg" class="hero-image" />
         <div class="hero-gradient" class="hero-gradient"></div>
         <div id="hero-transparent" style="color: transparent !important;">
-            <div class="hero-container project-description flex flex-col md:flex-row items-end" style="justify-content: space-between !important;">
+            <div class="hero-container project-description flex flex-col md:flex-row items-end"
+                style="justify-content: space-between !important;">
 
                 <div class="flex flex-col gap-2">
                     <h1 class="hero-title">
@@ -54,7 +74,7 @@
         function checkPassword() {
             const password = document.getElementById('sitePassword').value;
             const shifts = [3, -1, 2, -2, 1]; // Different shift values for each position
-            
+
             const encoded = password
                 .split('')
                 .map((char, index) => {
@@ -69,8 +89,62 @@
                     return char;
                 })
                 .join('');
-            
+
             window.location.href = `/${encoded}`;
+        }
+
+        // Modal dropdown for email
+        document.addEventListener('click', function (event) {
+            const dropdowns = document.getElementsByClassName("dropdown-content");
+            for (let dropdown of dropdowns) {
+                if (!dropdown.parentElement.contains(event.target)) {
+                    dropdown.classList.add('hidden');
+                }
+            }
+        });
+
+        const dropButtons = document.getElementsByClassName("dropbtn");
+        for (let button of dropButtons) {
+            button.addEventListener('click', function (event) {
+                const content = this.nextElementSibling;
+                content.classList.toggle('hidden');
+                event.stopPropagation();
+            });
+        }
+
+        function openModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.remove('hidden');
+            // Force reflow
+            modal.offsetHeight;
+            modal.classList.add('flex');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            const img = modal.querySelector('img');
+            img.style.transform = 'translateY(-150%) rotate(-5deg)';
+            modal.style.opacity = '0';
+            setTimeout(() => {
+                modal.classList.remove('flex');
+                modal.classList.add('hidden');
+                img.style.transform = '';
+                modal.style.opacity = '';
+            }, 700);
+        }
+
+        // Close on background click
+        document.getElementById('imageModal').addEventListener('click', function (e) {
+            if (e.target === this) closeModal();
+        });
+
+        function copyEmail(element) {
+            navigator.clipboard.writeText('hi@claudiopostinghel.com');
+            const originalText = element.textContent;
+            element.textContent = 'Copied!';
+            setTimeout(() => {
+                element.textContent = originalText;
+            }, 5000);
         }
     </script>
 </body>
