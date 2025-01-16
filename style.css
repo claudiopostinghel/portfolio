@@ -310,6 +310,31 @@ html {
     transform: translateX(5vw);
 }
 
+.sono-override-img {
+    width: 100%;
+    padding-left: 500px;
+    padding-top: 50px;
+}
+
+.sono-override-img img {
+    height: 100%;
+    width: 100%;
+    object-position: right bottom;
+    object-fit: contain;
+    transform: translateX(5vw);
+}
+
+@media (max-width: 1024px) {
+    .sono-override-img img {
+        max-width: 100%;
+        transform: none;
+    }
+    .sono-override-img {
+        padding-left: 3vw;
+        padding-right: 3vw;
+    }
+}
+
 @media (max-width: 1024px) {
     .spedire-override-img img {
         max-width: 100%;
