@@ -316,12 +316,19 @@ html {
     padding-top: 50px;
 }
 
-.sono-override-img img {
+.sono-override-img img.sono-desktop {
     height: 100%;
     width: 100%;
     object-position: right bottom;
     object-fit: contain;
     transform: translateX(5vw);
+}
+
+.sono-override-img img.sono-mobile {
+    height: 100%;
+    width: 100%;
+    object-position: center bottom;
+    object-fit: contain;
 }
 
 @media (max-width: 1024px) {
